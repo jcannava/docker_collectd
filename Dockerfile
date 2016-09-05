@@ -10,7 +10,7 @@ RUN curl -o /opt/get-pip.py https://bootstrap.pypa.io/get-pip.py
 RUN python /opt/get-pip.py
 
 RUN git clone https://github.com/signalfx/docker-collectd-plugin.git /usr/share/collectd/docker-collectd-plugin
-RUN pip install -r /usr/share/collectd/docker-collectd-plugin
+RUN pip install -r /usr/share/collectd/docker-collectd-plugin/requirements.txt
 
 RUN mkdir -p /opt/collectd
 RUN curl -o /opt/collectd.tar.gz https://collectd.org/files/collectd-5.5.2.tar.gz
