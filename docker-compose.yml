@@ -1,0 +1,7 @@
+collectd:
+  build: .
+  command: collectd -c /etc/collectd.conf
+  volumes:
+    - /proc:/host/proc
+    - /opt/collectd:/etc/collectd
+  restart: always
