@@ -6,7 +6,7 @@ RUN apt-get install -y build-essential curl libcurl4-gnutls-dev \
                        libmysqlclient-dev libhiredis-dev liboping-dev \
                        libyajl-dev libpq-dev git-core
 
-RUN git clone https://https://github.com/signalfx/docker-collectd-plugin.git /usr/share/collectd/docker-collectd-plugin
+RUN git clone https://github.com/signalfx/docker-collectd-plugin.git /usr/share/collectd/docker-collectd-plugin
 RUN pip install -r /usr/share/collectd/docker-collectd-plugin
 
 RUN mkdir -p /opt/collectd
