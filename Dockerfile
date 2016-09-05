@@ -7,8 +7,9 @@ RUN apt-get install -y build-essential curl libcurl4-gnutls-dev \
                        libyajl-dev libpq-dev
 
 RUN mkdir -p /opt/collectd
-RUN curl -o /opt/collectd.tar.gz https://collectd.org/files/collectd-5.5.2.tar.gz | tar zxf -C /opt/collectd -
-WORKDIR /opt/collectd
+RUN curl -o /opt/collectd.tar.gz https://collectd.org/files/collectd-5.5.2.tar.gz
+RUN tar -xvzf /opt/collectd.tar.gz -C /opt
+WORKDIR /opt/collectd-5.5.2
 RUN ./configure --prefix=/usr --sysconfdir=/etc/collectd --localstatedir=/var \
      --enable-debug
 RUN grep -rl /proc/ . | xargs sed -i "s/\/proc\//\/host\/proc\//g"
