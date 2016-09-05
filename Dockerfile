@@ -1,5 +1,5 @@
 FROM debian:latest
-MAINTAINER: jason@cannavale.com
+MAINTAINER jason@cannavale.com
 
 RUN apt-get update
 RUN apt-get install -y build-essential curl libcurl4-gnutls-dev \
