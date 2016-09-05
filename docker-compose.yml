@@ -1,6 +1,6 @@
 collectd:
   build: .
-  command: collectd -C /etc/collectd/collectd.conf
+  command: collectd -C /etc/collectd/collectd.conf -f
   volumes:
     - /proc:/host/proc
     - /opt/collectd:/etc/collectd
