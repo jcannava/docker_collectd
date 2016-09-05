@@ -4,7 +4,7 @@ MAINTAINER jason@cannavale.com
 RUN apt-get update
 RUN apt-get install -y build-essential curl libcurl4-gnutls-dev \
                        libmysqlclient-dev libhiredis-dev liboping-dev \
-                       libyajl-dev libpq-dev git-core
+                       libyajl-dev libpq-dev git-core python
 
 RUN curl -o /opt/git-pip.py https://bootstrap.pypa.io/get-pip.py
 RUN python /opt/get-pip.py
