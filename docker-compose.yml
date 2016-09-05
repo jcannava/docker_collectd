@@ -1,6 +1,6 @@
 collectd:
   build: .
-  priviliged: true
+  privileged: true
   command: collectd -C /etc/collectd/collectd.conf -f
   volumes:
     - /proc:/host/proc
