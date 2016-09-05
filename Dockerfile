@@ -16,7 +16,4 @@ RUN grep -rl /proc/ . | xargs sed -i "s/\/proc\//\/host\/proc\//g"
 RUN make all install
 RUN make clean
 
-WORKDIR /root
-COPY configure.sh /root/configure.sh
-RUN chmod +x /root/configure.sh
 RUN mkdir -p /host
