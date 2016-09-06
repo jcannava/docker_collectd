@@ -1,0 +1,10 @@
+[Unit]
+Description=Collectd
+After=docker.service
+Requires=docker.service
+
+[Service]
+TimeoutStartSec=0
+ExecStartPre=-/opt/bin/docker-compose -f /root/docker_collectd/docker-compose.yml down
+ExecStartPre=-/usr/bin/git --git-dir=/root/docker_collectd/.git pull
+ExecStart=/opt/bin/docker-compose -f /root/docker_collectd/docker-compose.yml up -d
